@@ -1,4 +1,10 @@
 @charset "utf-8";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+/* ---------------------------------------------------- 
+                                                    
+---------------------------------------------------- */
 
 /* ---------------------------------------------------- 
                                                     
@@ -7,6 +13,7 @@
 .container {
   width: min(100% - 30px, 1200px);
   margin-inline: auto;
+  min-height: 100vh;
 }
 
 :root {

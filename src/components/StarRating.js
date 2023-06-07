@@ -23,8 +23,19 @@ function StarRating({totalStars = 5}) {
     }
     
   return (
-    <section>
-        <h2>{starsSelected ? feedback(starsSelected) : "Give a rating!"}</h2>
+    <section className="flex flex-col text-center justify-center">
+        <div className="flex justify-center text-4xl">
+        {arrayOfStars.map((star, index) =>{
+            return (
+            <Star
+                key = {index}
+                selected = {starsSelected > index}
+                onSelect={() => setStarsSelected(index + 1)}
+            />
+            )
+        })}
+        </div>
+        <h2 className="text-white text-1xl">{starsSelected ? feedback(starsSelected) : "Give a rating!"}</h2>
     </section>
   )
 }

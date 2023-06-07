@@ -5,17 +5,11 @@ import { useState } from 'react';
 function App() {
   const [dialog, setDialog] = useState(true);
 
-  const renderDialog = () => {
-    if(dialog){
-      return <Dialog close={() => setDialog(false)}><h1>Dialog</h1></Dialog>;
-    }
-    return null
-  }
+
     
   return (
-    <div className="container">
+    <div className="flex justify-center container relative">
       <StarRating totalStars={5} />
-      {renderDialog()}
     </div>
   );
 }

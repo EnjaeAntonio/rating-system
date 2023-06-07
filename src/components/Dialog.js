@@ -1,8 +1,8 @@
 function Dialog({child, close}) {
   return (
-    <div className="dialog">
+    <div className="fixed bottom-5 right-5 dialog">
         {child}
-        <button onClick={close}>Dialog</button>
+        <button className="rounded-md bg-custom-blue px-5" onClick={close}>Open Dialog</button>
     </div>
   )
 }
