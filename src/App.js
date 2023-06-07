@@ -3,10 +3,10 @@ import Dialog from './components/Dialog';
 import StarRating from './components/StarRating';
 import { useState } from 'react';
 function App() {
-  const [dialogOpen, setDialogOpen] = useState(true);
+  const [dialogOpen, setDialogOpen] = useState(false);
   
   const handleDialogClose = () =>{
-    setDialogOpen(!dialogOpen);
+    setDialogOpen(prev => !prev);
   }
 
   return (
