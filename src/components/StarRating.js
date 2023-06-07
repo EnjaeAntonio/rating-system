@@ -24,12 +24,12 @@ function StarRating({totalStars = 5}) {
     
   return (
     <section className="flex flex-col text-center justify-center">
-        <div className="flex justify-center text-4xl">
+        <div className="cursor-pointer flex justify-center text-4xl">
         {arrayOfStars.map((star, index) =>{
             return (
             <Star
                 key = {index}
-                selected = {starsSelected > index}
+                color = {starsSelected > index}
                 onSelect={() => setStarsSelected(index + 1)}
             />
             )
@@ -40,4 +40,4 @@ function StarRating({totalStars = 5}) {
   )
 }
 
-export default StarRating
+export default StarRating;
