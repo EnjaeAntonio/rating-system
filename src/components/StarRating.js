@@ -8,7 +8,7 @@ function StarRating({totalStars = 5}) {
     const feedback = (index) => {
         switch(index){
             case 1:
-                return "Poor Performace";
+                return "Oh no!";
             case 2:
                 return "Not bad!";
             case 3: 
@@ -35,7 +35,7 @@ function StarRating({totalStars = 5}) {
             )
         })}
         </div>
-        <h2 className="text-white text-1xl mt-2">{starsSelected ? feedback(starsSelected) : "Share feedback!"}</h2>
+        <h2 className="text-white text-1xl mt-2">{starsSelected ? feedback(starsSelected) : "Give us a rating!"}</h2>
     </section>
   )
 }

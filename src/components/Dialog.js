@@ -8,7 +8,7 @@ function Dialog({ open, onClose }) {
               src="https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-png-transparent.png"
               alt="logo"
             />
-            <button className="text-white bg-red-500 rounded-md py-1 flex w-40 flex items-center justify-center" onClick={onClose}>
+            <button className="text-white bg-red-500 rounded-md py-1 mt-2 flex w-40 flex items-center justify-center" onClick={onClose}>
                 Close Image
             </button>
           </div>
