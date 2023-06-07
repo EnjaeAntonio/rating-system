@@ -5,18 +5,14 @@ import { useState } from 'react';
 function App() {
   const [dialogOpen, setDialogOpen] = useState(true);
   
-  const handleDialogOpen = () =>{
-    setDialogOpen(true);
-  }
-
-  const handleDialogClosed = () =>{
-    setDialogOpen(false);
+  const handleDialogClose = () =>{
+    setDialogOpen(!dialogOpen);
   }
 
   return (
     <div className="flex justify-center container relative h-screen w-screen">
       <StarRating />
-      <Dialog open={dialogOpen} close={handleDialogClosed}/>  
+      <Dialog open={dialogOpen} onClose={handleDialogClose} />  
     </div>
   );
 }

@@ -24,7 +24,7 @@ function StarRating({totalStars = 5}) {
     
   return (
     <section className="flex flex-col text-center justify-center">
-        <div className="cursor-pointer flex justify-center text-4xl">
+        <div className="cursor-pointer flex justify-center text-5xl">
         {arrayOfStars.map((star, index) =>{
             return (
             <Star
@@ -35,7 +35,7 @@ function StarRating({totalStars = 5}) {
             )
         })}
         </div>
-        <h2 className="text-white text-1xl mt-2">{starsSelected ? feedback(starsSelected) : "Give a rating!"}</h2>
+        <h2 className="text-white text-1xl mt-2">{starsSelected ? feedback(starsSelected) : "Share feedback!"}</h2>
     </section>
   )
 }

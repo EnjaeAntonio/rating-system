@@ -6,10 +6,6 @@
                                                     
 ---------------------------------------------------- */
 
-/* ---------------------------------------------------- 
-                                                    
----------------------------------------------------- */
-
 .container {
   width: min(100% - 30px, 1200px);
   margin-inline: auto;
@@ -48,10 +44,26 @@ html {
   text-rendering: geometricPrecision;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  
 }
 
+html {
+
+}
+
+
 body {
-  background: var(--app-dark-bg);
+  --s: 200px; /* control the size */
+  --c1: #0c0c0c;
+  --c2: #111111;
+  --c3: #0e0e0e;
+  
+  background:
+    repeating-conic-gradient(from 30deg,#0000 0 120deg,var(--c3) 0 180deg) 
+     calc(.5*var(--s)) calc(.5*var(--s)*0.577),
+    repeating-conic-gradient(from 30deg,var(--c1) 0 60deg,var(--c2) 0 120deg,var(--c3) 0 180deg);
+  background-size: var(--s) calc(var(--s)*0.577);
+  /* 0.577 = tan(30deg)*/
   height: 100%;
 }
 

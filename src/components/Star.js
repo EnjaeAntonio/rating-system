@@ -1,8 +1,8 @@
 import { FaStar } from 'react-icons/fa';
 
-function Star({ color = false, onSelect = f => f}) {
+function Star({ color, onSelect = f => f}) {
   return (
-    <FaStar color={color ? 'yellow' : 'grey'} onClick={onSelect}></FaStar>
+    <FaStar color={color ? '#ddbd00' : 'grey'} onClick={onSelect}></FaStar>
   )
 }
 
