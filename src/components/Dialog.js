@@ -1,9 +1,13 @@
-function Dialog({child, close}) {
+function Dialog({open, close}) {
   return (
-    <div className="fixed bottom-5 right-5 dialog">
-        {child}
-        <button className="text-white rounded-md bg-custom-blue px-5" onClick={close}>Open Dialog</button>
-    </div>
+    <section className="fixed inset-0 flex items-center justify-center">
+        <div>
+            <div>
+                <img className="w-40" src="https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-png-transparent.png" alt="logo"/>
+            </div>
+            <button className="fixed bottom-5 right-5 rounded-md bg-custom-blue px-5" onClick={close}>{open ? "Close Dialog" : "Open Dialog"}</button>
+        </div>
+    </section>
   )
 }
 
