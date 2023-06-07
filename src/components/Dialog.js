@@ -1,7 +1,9 @@
-
-function Dialog() {
+function Dialog({child, close}) {
   return (
-    <button>Dialog</button>
+    <div className="dialog">
+        {child}
+        <button onClick={close}>Dialog</button>
+    </div>
   )
 }
 
