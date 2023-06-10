@@ -1,8 +1,8 @@
 function Dialog({ open, onClose }) {
   return (
     <section className={`flex justify-center items-center ${open ? "absolute h-screen w-screen" : ""}`}>
-      <div className={`fixed transition-opacity duration-500 ${open ? "opacity-100" : "opacity-0"}`}
-           style={{left: '50%', top: '50%', transform: 'translate(-50%, -50%)'}}>
+        <div className={`fixed transition-opacity duration-500 ${open ? "opacity-100 " : "opacity-0"}`}
+           style={{left: '50%', top: '50%', transform: 'translate(-50%, -50%)', pointerEvents: open ? "auto" : "none" }}>
         <img
           className="w-40"
           src="https://cdn.freebiesupply.com/logos/large/2x/react-1-logo-png-transparent.png"
