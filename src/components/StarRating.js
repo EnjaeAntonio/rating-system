@@ -3,7 +3,7 @@ import Star from "./Star"
 
 function StarRating() {
     const [starsSelected, setStarsSelected] = useState(0);
-    const feedback = ["", "Oh no!", "Not bad!", "Nice!", "Very Good!", "Excellent!"];
+    const feedback = ["Oh no!", "Not bad!", "Nice!", "Very Good!", "Excellent!"];
     const arrayOfStars = Array(5).fill().map((star, index) =>{
         return (
         <Star
@@ -18,7 +18,7 @@ function StarRating() {
         <div className="cursor-pointer flex justify-center text-5xl">
         {arrayOfStars}
         </div>
-        <h2 className="text-white text-1xl mt-2">{starsSelected ? feedback[starsSelected] : "Give your feedback!"}</h2>
+        <h2 className="text-white text-1xl mt-2">{starsSelected ? feedback[starsSelected - 1] : "Give your feedback!"}</h2>
     </section>
   )
 }
