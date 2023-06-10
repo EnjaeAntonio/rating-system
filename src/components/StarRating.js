@@ -3,7 +3,7 @@ import Star from "./Star"
 
 function StarRating() {
     const [starsSelected, setStarsSelected] = useState(0);
-    const feedback = ["", "Oh no!", "Not Bad", "Good Job", "Very Good!", "Amazing!"]
+    const feedback = ["", "Oh no!", "Not bad!", "Nice!", "Very Good!", "Excellent!"];
     const arrayOfStars = Array(5).fill().map((star, index) =>{
         return (
         <Star
